@@ -53,7 +53,6 @@ let stars = document.querySelectorAll('.produkt__star');
 
 function starsActive(event) {
     let target = event.target;
-    let countStars = 4
     for (let i = 0; i < stars.length; i++) {
         console.log(parseInt(target.dataset.rate))
         if (i <= parseInt(target.dataset.rate)) {
