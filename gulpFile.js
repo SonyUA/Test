@@ -2,10 +2,8 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 
-
-
 function sassToCSS(done) {
-    gulp.src('./scss/*')
+    gulp.src('./scss/style.scss')
         .pipe(sass({
             errorLogToConsole: true,
         }))
@@ -13,13 +11,8 @@ function sassToCSS(done) {
         .pipe(gulp.dest('./css/'));
     done();
 }
-
-
-
-
 gulp.task('default', gulp.series(watchsassPug))
 
 function watchsassPug() {
-    gulp.watch("./scss/**/*", sassToCSS);
-
+    gulp.watch("./scss/style.scss", sassToCSS);
 }

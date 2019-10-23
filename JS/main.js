@@ -63,4 +63,4 @@ function starsActive(event) {
     }
 }
 starsBlock.addEventListener('click', starsActive);
-starsBlock.addEventListener('mouseover', starsActive);
+
